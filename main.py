@@ -20,3 +20,14 @@ def get_coordinates(address: str) -> Coordinates | None:
 
     if location:
         return Coordinates(latitude=location.latitude, longitude=location.longitude)
+    
+
+def main():
+    home_address: str = '1150 Boss RD, Mckinleyville, CA, 95519 USA'
+    print(f'Home address: {home_address}')
+
+
+    print(get_coordinates(home_address))
+
+if __name__ =='__main__':
+    main()
