@@ -15,7 +15,7 @@ class Coordinates:
     
 
 def get_coordinates(address: str) -> Coordinates | None:
-    geolocator = Nominatim(user.agent='distance_calculator')
+    geolocator = Nominatim(user_agent='distance_calculator')
     location = geolocator.geocode(address)
 
     if location:
