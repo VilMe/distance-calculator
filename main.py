@@ -25,7 +25,14 @@ def calculate_distance_km(home: Coordinates, target: Coordinates) -> float | Non
     if home and target:
         distance: float = geodesic(home.coordinates(), target.coordinates()).kilometers
         return distance
+
+def get_distance_km (home: str, target: str) -> float | None:
+    home_coordinates: Coordinates = get_coordinates(home)
+    target_coordinates: Coordinates = get_coordinates(target)
     
+    if distance := calculate_distance_km(home_coordinates, target_coordinates):
+        print(f'{home} -> {target}')
+        print('{distanct}')
 
 def main():
     home_address: str = '1150 Boss RD, Mckinleyville, CA, 95519 USA'
