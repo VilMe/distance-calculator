@@ -41,12 +41,14 @@ def main():
     home_address: str = '1150 Boss RD, Mckinleyville, CA, 95519 USA'
     print(f'Home address: {home_address}')
 
-
-    # print(get_coordinates(home_address))
-
+    
     target_address: str = input('Enter an addresss: ')
     print('Calculating...')
     get_distance_km(home_address, target=target_address)
+
+    # print(get_coordinates(home_address))
+
+  
 
 if __name__ =='__main__':
     main()
