@@ -32,14 +32,21 @@ def get_distance_km (home: str, target: str) -> float | None:
     
     if distance := calculate_distance_km(home_coordinates, target_coordinates):
         print(f'{home} -> {target}')
-        print('{distanct}')
+        print(f'{distance:.2f} kilometers')
+        return distance
+    else: 
+        print('Failed to calculate the distance.')
 
 def main():
     home_address: str = '1150 Boss RD, Mckinleyville, CA, 95519 USA'
     print(f'Home address: {home_address}')
 
 
-    print(get_coordinates(home_address))
+    # print(get_coordinates(home_address))
+
+    target_address: str = input('Enter an addresss: ')
+    print('Calculating...')
+    get_distance_km(home_address, target=target_address)
 
 if __name__ =='__main__':
     main()
